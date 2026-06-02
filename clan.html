@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PEMBURU FEMBOY | Minecraft PVP Clan</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+    
+    body {
+      font-family: 'Press Start 2P', system-ui;
+    }
+
+    .minecraft-bg {
+      background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1611996575749-79a3ae2a1d3e?q=80&w=1920');
+      background-size: cover;
+      background-attachment: fixed;
+    }
+
+    .card-hover {
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-20px) scale(1.05) rotate(2deg);
+      box-shadow: 0 0 40px rgba(74, 222, 128, 0.6);
+    }
+
+    .sword {
+      animation: swing 3s infinite alternate ease-in-out;
+    }
+
+    @keyframes swing {
+      0% { transform: rotate(-15deg); }
+      100% { transform: rotate(15deg); }
+    }
+
+    .pixel-text {
+      text-shadow: 
+        3px 3px 0 #000,
+        -3px -3px 0 #000,
+        3px -3px 0 #000,
+        -3px 3px 0 #000;
+    }
+
+    /* Mobile Menu */
+    #mobile-menu {
+      transition: all 0.4s ease;
+    }
+  </style>
+</head>
+<body class="bg-black text-white minecraft-bg min-h-screen">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full bg-black/90 border-b-4 border-green-500 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <i class="fas fa-skull text-3xl text-green-500 sword"></i>
+        <div>
+          <h1 class="text-2xl font-bold tracking-widest text-green-400">PEMBURU</h1>
+          <p class="text-xs text-pink-400 -mt-1">FEMBOY</p>
+        </div>
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex gap-8 text-sm">
+        <a href="#home" class="hover:text-green-400 transition">HOME</a>
+        <a href="#members" class="hover:text-green-400 transition">MEMBERS</a>
+        <a href="#about" class="hover:text-green-400 transition">ABOUT</a>
+        <a href="#gallery" class="hover:text-green-400 transition">GALLERY</a>
+      </div>
+
+      <!-- Hamburger Button (Mobile) -->
+      <button id="hamburger" class="md:hidden text-3xl text-green-400 focus:outline-none">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <div class="hidden md:block text-green-500 text-xl">
+        <i class="fas fa-sword"></i>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-black/95 border-t-2 border-green-500">
+      <div class="flex flex-col text-center py-6 space-y-6 text-lg">
+        <a href="#home" class="mobile-link hover:text-green-400 transition">HOME</a>
+        <a href="#members" class="mobile-link hover:text-green-400 transition">MEMBERS</a>
+        <a href="#about" class="mobile-link hover:text-green-400 transition">ABOUT</a>
+        <a href="#gallery" class="mobile-link hover:text-green-400 transition">GALLERY</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="min-h-screen flex items-center justify-center pt-20">
+    <div class="text-center px-6">
+      <div class="mb-8 inline-block">
+        <div class="text-6xl md:text-8xl font-bold pixel-text text-green-400 tracking-widest mb-2">
+          PEMBURU
+        </div>
+        <div class="text-5xl md:text-7xl font-bold pixel-text text-pink-400 tracking-widest">
+          FEMBOY
+        </div>
+      </div>
+      
+      <p class="text-xl md:text-2xl mb-10 max-w-xl mx-auto text-gray-300">
+        Clan PVP Minecraft Terkuat<br>
+        <span class="text-green-400">"Kami Bukan Femboy Biasa, Kami Pemburu Mereka"</span>
+      </p>
+
+      <div class="flex flex-col md:flex-row gap-6 justify-center">
+        <a href="#members" 
+           class="bg-green-500 hover:bg-green-600 text-black font-bold py-4 px-10 rounded-none border-4 border-black hover:border-green-400 transition text-lg">
+          LIHAT MEMBER
+        </a>
+        <a href="https://discord.gg/MeEQ24T8" 
+           class="border-4 border-green-500 hover:bg-green-500 hover:text-black font-bold py-4 px-10 rounded-none transition text-lg">
+          JOIN DISCORD
+        </a>
+      </div>
+
+      <div class="mt-20 text-4xl animate-bounce">
+        ↓
+      </div>
+    </div>
+  </section>
+
+  <!-- Members Section -->
+  <section id="members" class="py-20 bg-black/95">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 text-green-400 pixel-text">
+        CLAN MEMBERS
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Sunraku -->
+        <div class="card-hover bg-gradient-to-br from-zinc-900 to-black border-4 border-green-500 p-6 rounded-xl group">
+          <div class="relative mb-6">
+            <img src="steve.jpg" 
+                 class="w-full aspect-square object-cover border-4 border-green-400 rounded-lg">
+            <div class="absolute top-4 right-4 bg-green-500 text-black text-xs font-bold px-4 py-1 rounded">
+              KETUA
+            </div>
+            <div class="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-black border-2 border-pink-500 text-pink-400 text-sm px-6 py-1 rounded-full">
+              SUNRAKU
+            </div>
+          </div>
+          <h3 class="text-2xl font-bold text-center mb-2">SUNRAKU</h3>
+          <p class="text-green-400 text-center mb-4">Clan Leader • PVP God</p>
+          <p class="text-sm text-gray-400 text-center leading-relaxed">
+            Pendiri sekaligus otak dari Pemburu Femboy. 
+            5000+ kills di ranked. Tak terkalahkan di 1v1.
+          </p>
+        </div>
+
+        <!-- Fatur -->
+        <div class="card-hover bg-gradient-to-br from-zinc-900 to-black border-4 border-green-500 p-6 rounded-xl group">
+          <div class="relative mb-6">
+            <img src="steve.jpg" 
+                 class="w-full aspect-square object-cover border-4 border-green-400 rounded-lg">
+            <div class="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-black border-2 border-pink-500 text-pink-400 text-sm px-6 py-1 rounded-full">
+              FATUR
+            </div>
+          </div>
+          <h3 class="text-2xl font-bold text-center mb-2">FATUR</h3>
+          <p class="text-green-400 text-center mb-4">Member • Rush Master</p>
+          <p class="text-sm text-gray-400 text-center leading-relaxed">
+            Spesialis rush dan combo. Cepat, mematikan, dan selalu bawa bed.
+          </p>
+        </div>
+
+        <!-- Bridge -->
+        <div class="card-hover bg-gradient-to-br from-zinc-900 to-black border-4 border-green-500 p-6 rounded-xl group">
+          <div class="relative mb-6">
+            <img src="steve.jpg" 
+                 class="w-full aspect-square object-cover border-4 border-green-400 rounded-lg">
+            <div class="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-black border-2 border-pink-500 text-pink-400 text-sm px-6 py-1 rounded-full">
+              BRIDGE
+            </div>
+          </div>
+          <h3 class="text-2xl font-bold text-center mb-2">BRIDGE</h3>
+          <p class="text-green-400 text-center mb-4">Member • Bridge God</p>
+          <p class="text-sm text-gray-400 text-center leading-relaxed">
+            Raja Bridge. Bisa bikin jembatan di tengah pertempuran sambil nge-kill.
+          </p>
+        </div>
+
+        <!-- Drake -->
+        <div class="card-hover bg-gradient-to-br from-zinc-900 to-black border-4 border-green-500 p-6 rounded-xl group">
+          <div class="relative mb-6">
+            <img src="steve.jpg" 
+                 class="w-full aspect-square object-cover border-4 border-green-400 rounded-lg">
+            <div class="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-black border-2 border-pink-500 text-pink-400 text-sm px-6 py-1 rounded-full">
+              DRAKE
+            </div>
+          </div>
+          <h3 class="text-2xl font-bold text-center mb-2">DRAKE</h3>
+          <p class="text-green-400 text-center mb-4">Member • Crystal PVP</p>
+          <p class="text-sm text-gray-400 text-center leading-relaxed">
+            Master Crystal PVP. Auto-aim dan placement terbaik di clan.
+          </p>
+        </div>
+
+        <!-- Noxtzy -->
+        <div class="card-hover bg-gradient-to-br from-zinc-900 to-black border-4 border-green-500 p-6 rounded-xl group">
+          <div class="relative mb-6">
+            <img src="nox.png" 
+                 class="w-full aspect-square object-cover border-4 border-green-400 rounded-lg">
+            <div class="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-black border-2 border-pink-500 text-pink-400 text-sm px-6 py-1 rounded-full">
+              NOXTZY
+            </div>
+          </div>
+          <h3 class="text-2xl font-bold text-center mb-2">NOXTZY</h3>
+          <p class="text-green-400 text-center mb-4">Member • Sniper</p>
+          <p class="text-sm text-gray-400 text-center leading-relaxed">
+            Spesialis bow & arrow. Bisa headshot dari jarak 100 blok.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-20 bg-gradient-to-b from-black to-zinc-950">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-10 text-pink-400">TENTANG KAMI</h2>
+      <p class="text-lg leading-relaxed text-gray-300">
+        Pemburu Femboy adalah clan Minecraft PVP yang dibentuk untuk mendominasi 
+        semua server. Dengan gaya bermain yang agresif, skill tinggi, dan chemistry 
+        yang sangat kuat, kami siap membantai siapapun yang berani melawan.
+      </p>
+      <div class="grid grid-cols-3 gap-8 mt-16">
+        <div>
+          <div class="text-5xl text-green-400 font-bold">69</div>
+          <div class="text-sm mt-2">WIN STREAK</div>
+        </div>
+        <div>
+          <div class="text-5xl text-green-400 font-bold">∞</div>
+          <div class="text-sm mt-2">SKILL ISSUE</div>
+        </div>
+        <div>
+          <div class="text-5xl text-green-400 font-bold">5</div>
+          <div class="text-sm mt-2">PEMBURU</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="py-20 bg-black/95">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12 text-green-400">GALLERY</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <img src="1.png" class="rounded-lg hover:scale-105 transition" >
+        <img src="2.png" class="rounded-lg hover:scale-105 transition">
+        <img src="3.png" class="rounded-lg hover:scale-105 transition">
+        <img src="4.png" class="rounded-lg hover:scale-105 transition">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black border-t-4 border-green-500 py-12">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <p class="text-green-400 text-xl mb-4">PEMBURU FEMBOY © 2026</p>
+      <p class="text-xs text-gray-500">We don't chase clout, we chase heads.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        if (this.getAttribute('href') !== '#') {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+          
+          // Tutup mobile menu setelah klik
+          if (window.innerWidth < 768) {
+            mobileMenu.classList.add('hidden');
+            hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+          }
+        }
+      });
+    });
+
+    // Mobile Menu Toggle
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      
+      if (mobileMenu.classList.contains('hidden')) {
+        hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+      } else {
+        hamburger.innerHTML = '<i class="fas fa-times"></i>';
+      }
+    });
+  </script>
+</body>
+</html>
